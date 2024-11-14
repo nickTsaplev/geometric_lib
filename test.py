@@ -23,6 +23,12 @@ class RectangleTestCase(unittest.TestCase):
     def test_perimeter_sum(self):
         res = rectangle.perimeter(10, 5)
         self.assertEqual(res, 30)
+
+    def test_negative(self):
+        with self.assertRaises(AssertionError):
+            rectangle.area(-5, -5)
+        with self.assertRaises(AssertionError):
+            rectangle.perimeter(-5, -5)
         
     def test_operation_speed(self):
         start = time.process_time()
@@ -51,6 +57,13 @@ class SquareTestCase(unittest.TestCase):
     def test_perimeter_sum(self):
         res = square.perimeter(10)
         self.assertEqual(res, 40)
+
+    def test_negative(self):
+        with self.assertRaises(AssertionError):
+            square.area(-5)
+        with self.assertRaises(AssertionError):
+            square.perimeter(-5)
+        
         
     def test_operation_speed(self):
         start = time.process_time()
@@ -79,6 +92,12 @@ class TriangleTestCase(unittest.TestCase):
     def test_perimeter_sum(self):
         res = triangle.perimeter(10, 11, 12)
         self.assertEqual(res, 33)
+
+    def test_negative(self):
+        with self.assertRaises(AssertionError):
+            triangle.area(-5, 10)
+        with self.assertRaises(AssertionError):
+            triangle.perimeter(1, -5, 2)
         
     def test_operation_speed(self):
         start = time.process_time()
@@ -107,6 +126,12 @@ class CircleTestCase(unittest.TestCase):
     def test_perimeter(self):
         res = circle.perimeter(10)
         self.assertAlmostEqual(res, 20 * math.pi)
+    
+    def test_negative(self):
+        with self.assertRaises(AssertionError):
+            triangle.area(-5, 10)
+        with self.assertRaises(AssertionError):
+            triangle.perimeter(1, -5, 2)
         
     def test_operation_speed(self):
         start = time.process_time()
