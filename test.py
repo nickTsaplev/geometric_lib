@@ -129,9 +129,9 @@ class CircleTestCase(unittest.TestCase):
     
     def test_negative(self):
         with self.assertRaises(AssertionError):
-            triangle.area(-5, 10)
+            circle.area(-5)
         with self.assertRaises(AssertionError):
-            triangle.perimeter(1, -5, 2)
+            circle.perimeter(-5)
         
     def test_operation_speed(self):
         start = time.process_time()
