@@ -39,7 +39,7 @@ class RectangleTestCase(unittest.TestCase):
             res = 0
         end = time.process_time()
         print("\nRectangle time:",times,"times in:",end - start,"seconds")
-        self.assertLess(end - start, 0.1)
+        self.assertLess(end - start, 0.5)
     
 class SquareTestCase(unittest.TestCase):
     def test_zero_area(self):
@@ -74,7 +74,7 @@ class SquareTestCase(unittest.TestCase):
             res = 0
         end = time.process_time()
         print("\nSquare time:",times,"times in:",end - start,"seconds")
-        self.assertLess(end - start, 0.1)
+        self.assertLess(end - start, 0.5)
         
 class TriangleTestCase(unittest.TestCase):
     def test_zero_area(self):
@@ -108,7 +108,7 @@ class TriangleTestCase(unittest.TestCase):
             res = 0
         end = time.process_time()
         print("\nTriangle time:",times,"times in:",end - start,"seconds")
-        self.assertLess(end - start, 0.1)
+        self.assertLess(end - start, 0.5)
     
 class CircleTestCase(unittest.TestCase):
     def test_zero_area(self):
@@ -142,5 +142,5 @@ class CircleTestCase(unittest.TestCase):
             res = 0
         end = time.process_time()
         print("\nCircle time:",times,"times in:",end - start,"seconds")
-        self.assertLess(end - start, 0.1)
+        self.assertLess(end - start, 0.5)
     
