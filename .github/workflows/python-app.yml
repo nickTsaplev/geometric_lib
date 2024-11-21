@@ -25,7 +25,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Check the unittests
       run: |
         python3 -m unittest test.py
@@ -42,7 +41,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Check the unittests
       run: |
         python3 -m unittest test.py
